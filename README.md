@@ -61,57 +61,7 @@ Customer churn directly impacts revenue. Predicting churn allows businesses to:
 
 ---
 
-**Important Notes:**
-- Make sure there are **no extra `---` inside the mermaid block**.
-- Mermaid block should not be inside a `bash` or any other code block — it must stand alone.
-
----
-
-#
-**Important Notes:**
-- Make sure there are **no extra `---` inside the mermaid block**.
-- Mermaid block should not be inside a `bash` or any other code block — it must stand alone.
-
----
-
-### Full Example After Project Structure
-
-```markdown
-### 📂 Project Structure
-
-CustomerChurnProject/
-│
-├── data/
-│   └── cleaned_churn_data.csv
-├── notebooks/
-│   ├── 01_EDA_and_Visualization.ipynb
-│   └── 02_Model_Training_and_Evaluation.ipynb
-├── scripts/
-│   ├── feature_engineering.py
-│   ├── Model_Prediction_Example.py
-│   └── Best_Model_Prediction_and_Report.py
-├── models/
-│   └── LogisticRegression_model.pkl
-├── reports/
-│   ├── LogisticRegression_model_Predictions.csv
-│   ├── LogisticRegression_model_Prediction_Report.pdf
-│   ├── confusion_matrix.png
-│   └── Model_Training_Summary.pdf
-├── requirements.txt
-└── README.md
-
-## 🔄 Project Workflow
-
-```mermaid
-graph TD
-A[Data Loading] --> B[Data Cleaning & EDA]
-B --> C[Feature Engineering]
-C --> D[Model Training & Evaluation]
-D --> E[Best Model Selection]
-E --> F[Predictions & Reports]
-F --> G[PDF Summary Generation]
-
-## 📊 Model Performance
+#### 📊 Model Performance
 
 ### 🧠 Model Training Summary (Actual Results)
 | Model | Best Parameters | Accuracy | ROC-AUC |
@@ -160,3 +110,34 @@ pip install -r requirements.txt
 python scripts/Feature_Engineering.py
 python scripts/Model_Training_and_Evaluation.py
 python scripts/Best_Model_Prediction_and_Report.py
+
+---
+
+### 📂 Project Structure
+
+```bash
+CustomerChurnProject/
+│
+├── data/
+│   └── cleaned_churn_data.csv
+│
+├── notebooks/
+│   ├── 01_EDA_and_Visualization.ipynb
+│   └── 02_Model_Training_and_Evaluation.ipynb
+│
+├── scripts/
+│   ├── feature_engineering.py
+│   ├── Model_Prediction_Example.py
+│   └── Best_Model_Prediction_and_Report.py
+│
+├── models/
+│   └── LogisticRegression_model.pkl
+│
+├── reports/
+│   ├── LogisticRegression_model_Predictions.csv
+│   ├── LogisticRegression_model_Prediction_Report.pdf
+│   ├── confusion_matrix.png
+│   └── Model_Training_Summary.pdf
+│
+├── requirements.txt
+└── README.md
