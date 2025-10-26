@@ -37,6 +37,29 @@ Customer churn directly impacts revenue. Predicting churn allows businesses to:
 | Version Control | Git, GitHub |
 
 ---
+### 📂 Project Structure
+
+CustomerChurnProject/
+│
+├── data/
+│ └── cleaned_churn_data.csv
+├── notebooks/
+│ ├── 01_EDA_and_Visualization.ipynb
+│ └── 02_Model_Training_and_Evaluation.ipynb
+├── scripts/
+│ ├── feature_engineering.py
+│ ├── Model_Prediction_Example.py
+│ └── Best_Model_Prediction_and_Report.py
+├── models/
+│ └── LogisticRegression_model.pkl
+├── reports/
+│ ├── LogisticRegression_model_Predictions.csv
+│ ├── LogisticRegression_model_Prediction_Report.pdf
+│ ├── confusion_matrix.png
+│ └── Model_Training_Summary.pdf
+├── requirements.txt
+└── README.md
+---
 
 ## 🔍 Project Workflow
 1. **Data Understanding & Cleaning**  
@@ -61,7 +84,7 @@ Customer churn directly impacts revenue. Predicting churn allows businesses to:
 
 ---
 
-#### 📊 Model Performance
+## 📊 Model Performance
 
 ### 🧠 Model Training Summary (Actual Results)
 | Model | Best Parameters | Accuracy | ROC-AUC |
@@ -107,37 +130,7 @@ cd Customer-Churn-Prediction-Retail
 pip install -r requirements.txt
 
 # Run the main scripts
-python scripts/Feature_Engineering.py
+python scripts/feature_engineering.py
 python scripts/Model_Training_and_Evaluation.py
 python scripts/Best_Model_Prediction_and_Report.py
-
----
-
-### 📂 Project Structure
-
-```bash
-CustomerChurnProject/
-│
-├── data/
-│   └── cleaned_churn_data.csv
-│
-├── notebooks/
-│   ├── 01_EDA_and_Visualization.ipynb
-│   └── 02_Model_Training_and_Evaluation.ipynb
-│
-├── scripts/
-│   ├── feature_engineering.py
-│   ├── Model_Prediction_Example.py
-│   └── Best_Model_Prediction_and_Report.py
-│
-├── models/
-│   └── LogisticRegression_model.pkl
-│
-├── reports/
-│   ├── LogisticRegression_model_Predictions.csv
-│   ├── LogisticRegression_model_Prediction_Report.pdf
-│   ├── confusion_matrix.png
-│   └── Model_Training_Summary.pdf
-│
-├── requirements.txt
-└── README.md
+```
