@@ -60,6 +60,9 @@ Customer churn directly impacts revenue. Predicting churn allows businesses to:
    - Provide actionable business strategies  
 
 ---
+### 📂 Project Structure
+
+```bash
 CustomerChurnProject/
 │
 ├── data/
