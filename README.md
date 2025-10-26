@@ -38,7 +38,7 @@ Customer churn directly impacts revenue. Predicting churn allows businesses to:
 
 ---
 ### 📂 Project Structure
-
+'''
 CustomerChurnProject/
 │
 ├── data/
@@ -59,6 +59,7 @@ CustomerChurnProject/
 │ └── Model_Training_Summary.pdf
 ├── requirements.txt
 └── README.md
+'''
 ---
 
 ## 🔍 Project Workflow
