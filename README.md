@@ -88,6 +88,19 @@ CustomerChurnProject/
 │
 ├── requirements.txt
 └── README.md
+---
+
+## 🔄 Project Workflow
+
+```mermaid
+graph TD
+A[Data Loading] --> B[Data Cleaning & EDA]
+B --> C[Feature Engineering]
+C --> D[Model Training & Evaluation]
+D --> E[Best Model Selection]
+E --> F[Predictions & Reports]
+F --> G[PDF Summary Generation]
+---
 
 ## 📊 Model Performance
 
