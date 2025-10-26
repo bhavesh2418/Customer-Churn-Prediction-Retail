@@ -60,24 +60,63 @@ Customer churn directly impacts revenue. Predicting churn allows businesses to:
    - Provide actionable business strategies  
 
 ---
+CustomerChurnProject/
+│
+├── data/
+│   └── cleaned_churn_data.csv
+│
+├── notebooks/
+│   ├── 01_EDA_and_Visualization.ipynb
+│   └── 02_Model_Training_and_Evaluation.ipynb
+│
+├── scripts/
+│   ├── feature_engineering.py
+│   ├── Model_Prediction_Example.py
+│   └── Best_Model_Prediction_and_Report.py
+│
+├── models/
+│   └── LogisticRegression_model.pkl
+│
+├── reports/
+│   ├── LogisticRegression_model_Predictions.csv
+│   ├── LogisticRegression_model_Prediction_Report.pdf
+│   ├── confusion_matrix.png
+│   └── Model_Training_Summary.pdf
+│
+├── requirements.txt
+└── README.md
 
-## 📊 Model Performance (Example)
-| Model | Accuracy | Precision | Recall | F1-Score |
-|-------|----------|-----------|--------|----------|
-| Logistic Regression | 0.82 | 0.78 | 0.74 | 0.76 |
-| Random Forest | 0.86 | 0.83 | 0.80 | 0.81 |
-| XGBoost | **0.88** | **0.85** | **0.83** | **0.84** |
+## 📊 Model Performance
 
-*(Update with your actual results after model training)*
+### 🧠 Model Training Summary (Actual Results)
+| Model | Best Parameters | Accuracy | ROC-AUC |
+|-------|-----------------|----------|----------|
+| Random Forest | max_depth=10, n_estimators=100 | 0.475 | 0.4747 |
+| XGBoost | max_depth=7, learning_rate=0.1 | 0.495 | 0.489 |
+| Logistic Regression | C=0.1, solver=liblinear | 🏆 **0.515** | **0.512** |
+
+✅ **Best Model:** Logistic Regression  
+📂 **Saved As:** `models/LogisticRegression_model.pkl`
 
 ---
 
-## 🖼️ Visualization Preview
-- **Churn Distribution:** ![Churn Distribution](images/churn_distribution.png)  
-- **Top Features Influencing Churn:** ![Feature Importance](images/feature_importance.png)  
-- **RFM Segmentation:** ![RFM Plot](images/rfm_plot.png)  
+## 📊 Key Visual Insights
+| Visualization | Description |
+|---------------|-------------|
+| 🧍‍♂️ **Churn Distribution** | Shows percentage of retained vs churned customers |
+| 💸 **Top Predictive Features** | Identifies top drivers of churn (e.g., Total Spend, Last Purchase Days) |
+| ⏱️ **Customer Tenure & Spend Patterns** | Shows how long-term vs new customers behave differently |
 
-*(Add actual plots after running your notebooks)*
+📁 *(All visualizations generated in `01_EDA_and_Visualization.ipynb` and stored under `/reports/`.)*
+
+---
+
+## 📂 Outputs & Reports
+| Type | File | Description |
+|------|------|-------------|
+| 📘 **Model Summary PDF** | `reports/Model_Training_Summary.pdf` | Consolidated model evaluation |
+| 📑 **Prediction Report PDF** | `reports/LogisticRegression_model_Prediction_Report.pdf` | Test predictions with visuals |
+| 📊 **Predictions CSV** | `reports/LogisticRegression_model_Predictions.csv` | Actual vs predicted churn with probabilities |
 
 ---
 
@@ -92,5 +131,7 @@ cd Customer-Churn-Prediction-Retail
 # Install dependencies
 pip install -r requirements.txt
 
-# Launch Jupyter Notebook
-jupyter notebook
+# Run the main scripts
+python scripts/Feature_Engineering.py
+python scripts/Model_Training_and_Evaluation.py
+python scripts/Best_Model_Prediction_and_Report.py
