@@ -1,0 +1,16 @@
+Model: RandomForest
+Best Parameters: {'max_depth': 10, 'min_samples_split': 2, 'n_estimators': 100}
+Accuracy: 0.4750
+ROC-AUC: 0.4747
+Confusion Matrix:
+[[40 55]
+ [50 55]]
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.44      0.42      0.43        95
+           1       0.50      0.52      0.51       105
+
+    accuracy                           0.47       200
+   macro avg       0.47      0.47      0.47       200
+weighted avg       0.47      0.47      0.47       200

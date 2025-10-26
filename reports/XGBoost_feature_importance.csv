@@ -1,0 +1,15 @@
+Feature,Importance
+Num_of_Purchases,0.08502666
+Average_Transaction_Amount,0.08259922
+Total_Spend,0.07771973
+Customer_ID,0.07420917
+Satisfaction_Score,0.07406443
+Num_of_Returns,0.07379025
+Num_of_Support_Contacts,0.07365278
+Last_Purchase_Days_Ago,0.07159376
+Annual_Income,0.069549836
+Age,0.06865608
+Years_as_Customer,0.06463134
+Gender,0.06417737
+Promotion_Response,0.063970365
+Email_Opt_In,0.056358974
